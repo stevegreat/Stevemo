@@ -1,0 +1,17 @@
+#version 430 core
+          
+uniform mat4 mvp;
+uniform vec3 gvp; // global vertex position
+uniform float offset;
+uniform vec3 eye;
+
+in vec3 vecPosition;
+
+out vec3 vecFragmentGlobalPosition;
+out vec3 vecEye;
+
+void main(void) {
+	vecEye = eye;
+	vecFragmentGlobalPosition = gvp;
+	gl_Position = mvp * gl_Vertex;
+}
