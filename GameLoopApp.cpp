@@ -1,4 +1,7 @@
 #include "GameLoopApp.h"
+#include "TempPractice.h"
+#include "XMLLevelLoader.h"
+#include "Level.h"
 #include <fstream>
 
 void GameLoopApp::init()
@@ -13,7 +16,6 @@ void GameLoopApp::init()
 size_t GameLoopApp::load_file( char* pszFilePath, GLchar* source ) {
 	std::ifstream file;
 	int i = -1;
-	char c;
 	file.open( pszFilePath );
 
 	while ( file.good() ) {

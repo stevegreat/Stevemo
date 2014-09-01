@@ -1,20 +1,76 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="SteveUniformPractice.cpp" />
-    <ClCompile Include="SteveFirstApp.cpp" />
     <ClCompile Include="GameRunner.cpp" />
-    <ClCompile Include="GameLoopApp.cpp" />
-    <ClCompile Include="SteveArrayTexture.cpp" />
-    <ClCompile Include="SteveTunnelMipmap.cpp" />
-    <ClCompile Include="SteveFogShader.cpp" />
+    <ClCompile Include="XMLLevelLoader.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLoopApp.cpp">
+      <Filter>Apps</Filter>
+    </ClCompile>
+    <ClCompile Include="SteveArrayTexture.cpp">
+      <Filter>Apps</Filter>
+    </ClCompile>
+    <ClCompile Include="SteveFirstApp.cpp">
+      <Filter>Apps</Filter>
+    </ClCompile>
+    <ClCompile Include="SteveFogShader.cpp">
+      <Filter>Apps</Filter>
+    </ClCompile>
+    <ClCompile Include="SteveTunnelMipmap.cpp">
+      <Filter>Apps</Filter>
+    </ClCompile>
+    <ClCompile Include="SteveUniformPractice.cpp">
+      <Filter>Apps</Filter>
+    </ClCompile>
+    <ClCompile Include="TempPractice.cpp">
+      <Filter>Tinkering</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SteveFirstApp.h" />
-    <ClInclude Include="SteveUniformPractice.h" />
-    <ClInclude Include="GameLoopApp.h" />
-    <ClInclude Include="SteveArrayTexture.h" />
-    <ClInclude Include="SteveTunnelMipmap.h" />
-    <ClInclude Include="SteveFogShader.h" />
+    <ClInclude Include="XMLLoader.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="XMLLevelLoader.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLoopApp.h">
+      <Filter>Apps</Filter>
+    </ClInclude>
+    <ClInclude Include="SteveArrayTexture.h">
+      <Filter>Apps</Filter>
+    </ClInclude>
+    <ClInclude Include="SteveFirstApp.h">
+      <Filter>Apps</Filter>
+    </ClInclude>
+    <ClInclude Include="SteveFogShader.h">
+      <Filter>Apps</Filter>
+    </ClInclude>
+    <ClInclude Include="SteveTunnelMipmap.h">
+      <Filter>Apps</Filter>
+    </ClInclude>
+    <ClInclude Include="SteveUniformPractice.h">
+      <Filter>Apps</Filter>
+    </ClInclude>
+    <ClInclude Include="TempPractice.h">
+      <Filter>Tinkering</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Level">
+      <UniqueIdentifier>{74c58aa7-00f7-40b7-9c1e-bbf82f8cfa63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Apps">
+      <UniqueIdentifier>{bcccf284-e81f-4466-8b4a-b799dde9a557}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tinkering">
+      <UniqueIdentifier>{bd80ca8a-878c-41c0-b038-71a2cd60f742}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

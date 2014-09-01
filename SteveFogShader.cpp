@@ -1,4 +1,5 @@
 #include "SteveFogShader.h"
+#include "XMLLevelLoader.h"
 #include <sb6ktx.h>
 #include <vmath.h>
 
@@ -38,6 +39,12 @@ void SteveFogShader::startup() {
 	m_box_up = vmath::vec3( 0.0f, 1.0f, 0.0f );
 
 	onMouseMove( 1, 0 );
+
+	// Load up the level
+	XMLLevelLoader xml_level;
+	xml_level.load_xml( "media/levels/demo_level.oel" );
+	xml_level.build_level( m_level );
+	xml_level.unload_xml();
 
 	rendering_program = compile_shaders( "fog_shader_vs.txt", "fog_shader_fs.txt" );
 
@@ -130,16 +137,14 @@ void SteveFogShader::render( double currentTime ) {
 	glUniform3fv( uniforms.gvp, 1, m_box_position );
 	glUniform3fv( uniforms.eye, 1, m_eye_position );
 
-	
-	glDrawArrays( GL_TRIANGLE_STRIP, 0, 24 );
-	//glDrawArrays( GL_TRIANGLE_STRIP, 4, 4 );
-	//glDrawArrays( GL_TRIANGLE_STRIP, 8, 4 );
-	//glDrawArrays( GL_TRIANGLE_STRIP, 12, 4 );
-	//glDrawArrays( GL_TRIANGLE_STRIP, 16, 4 );
-	//glDrawArrays( GL_TRIANGLE_STRIP, 20, 4 );
+	glDrawArrays( GL_TRIANGLE_STRIP, 4, 4 );
+	glDrawArrays( GL_TRIANGLE_STRIP, 8, 4 );
+	glDrawArrays( GL_TRIANGLE_STRIP, 12, 4 );
+	glDrawArrays( GL_TRIANGLE_STRIP, 16, 4 );
+	glDrawArrays( GL_TRIANGLE_STRIP, 20, 4 );
 	wchar_t  debugText[100];
-	swprintf(debugText, 100, L"EYE POSITION: %f %f %f ANGLE: %f\n", m_eye_position[0], m_eye_position[1], m_eye_position[2], m_angle );
-	OutputDebugString( debugText );
+	//swprintf(debugText, 100, L"EYE POSITION: %f %f %f ANGLE: %f\n", m_eye_position[0], m_eye_position[1], m_eye_position[2], m_angle );
+	//OutputDebugString( debugText );
 }
 
 void SteveFogShader::shutdown() {
