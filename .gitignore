@@ -2,7 +2,9 @@
 ## Steve Related things
 #################
 
-media/
+media/objects
+media/shaders
+media/textures
 stevemo_Debug/
 
 #################
