@@ -14,9 +14,10 @@ public:
 	void onMouseMove(int x, int y);
 protected:
 	Level			m_level;
-	GLuint          buffer, position_buffer;
+	GLuint          buffer;
 	GLfloat			m_offset, m_side_offset, m_AngleX, m_AngleY;
 	bool			m_forward_press, m_backward_press, m_left_press, m_right_press, m_rotate_right_press, m_rotate_left_press;
+	bool			m_fog;
 	int				m_MouseX, m_MouseY;
 
 	vmath::vec3 m_eye_position, m_box_position;
@@ -31,5 +32,7 @@ protected:
         GLint       offset;
 		GLint		eye;
 		GLint		gvp;
+		GLint		show_fog;
+		GLint		main_color;
     } uniforms;
 };

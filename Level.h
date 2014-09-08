@@ -51,7 +51,15 @@ private:
 public:
 	Level();
 	~Level();
-	int SetTile( const int type, const int width, const int height );
+	int SetTile( const int type, const int row, const int col );
+	int GetTile( const int row, const int col );
 	int AddEntity( const int type, const int x, const int y );
 	int AddEntity( const LevelEntity entity );
+	int GetEntityCount();
+	int GetEntityType( int i );
+	int GetEntityX( int i );
+	int GetEntityY( int i );
+	float GetEntityFloatX( int i );
+	float GetEntityFloatY( int i );
+	int GetStartIndex();
 };

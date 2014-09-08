@@ -28,6 +28,10 @@ int Level::SetTile( const int type, const int row, const int col ) {
 	return LevelError::LEVEL_SUCCESS;
 }
 
+int Level::GetTile( const int row, const int col ) {
+	return m_tiles[ row ][ col ];
+}
+
 int Level::AddEntity( const int type, const int x, const int y ) {
 	const LevelEntity entity = { type, x, y };
 	return AddEntity( entity );
@@ -52,4 +56,32 @@ int Level::AddEntity( const LevelEntity entity ) {
 	m_entities[ m_level_entities_count ] = entity;
 	++m_level_entities_count;
 	return LevelError::LEVEL_SUCCESS;
+}
+
+int Level::GetEntityCount() {
+	return m_level_entities_count;
+}
+
+int Level::GetEntityType( int i ) {
+	return m_entities[ i ].type;
+}
+
+int Level::GetEntityX( int i ) {
+	return m_entities[ i ].x;
+}
+
+int Level::GetEntityY( int i ) {
+	return m_entities[ i ].y;
+}
+
+float Level::GetEntityFloatX( int i ) {
+	return m_entities[ i ].x + 0.0f;
+}
+
+float Level::GetEntityFloatY( int i ) {
+	return m_entities[ i ].y + 0.0f;
+}
+
+int Level::GetStartIndex() {
+	return m_start_index;
 }
